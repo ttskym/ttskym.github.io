@@ -152,7 +152,7 @@ tag_pagination: true
 
 # Integrated services
 # Your Disqus shortname
-disqus_shortname:
+disqus_shortname: Li0n
 # Your Google analystics web property ID : UA-XXXXX-X
 google_analytics_id:
 # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
