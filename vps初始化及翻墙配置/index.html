@@ -6,26 +6,20 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Lion Blog">
-    <title>VPS 初始化及翻墙配置 - Lion Blog</title>
+    <title>VPS 初始化及科学上网配置 - Lion Blog</title>
     <meta name="author" content="Lion">
     
     
-    <meta name="description" content="vps 初始化配置Shadowsocks Server配置shadowsocks github 主页,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本Server版本
-安装shadowsocks Server
-git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; python se">
+    <meta name="description" content="本位主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚邀请链接。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="VPS 初始化及翻墙配置">
+<meta property="og:title" content="VPS 初始化及科学上网配置">
 <meta property="og:url" content="http:/vps初始化及翻墙配置/index.html">
 <meta property="og:site_name" content="Lion Blog">
-<meta property="og:description" content="vps 初始化配置Shadowsocks Server配置shadowsocks github 主页,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本Server版本
-安装shadowsocks Server
-git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; python se">
-<meta property="og:updated_time" content="2015-08-19T07:00:09.000Z">
+<meta property="og:description" content="本位主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚邀请链接。">
+<meta property="og:updated_time" content="2015-08-19T07:17:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS 初始化及翻墙配置">
-<meta name="twitter:description" content="vps 初始化配置Shadowsocks Server配置shadowsocks github 主页,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本Server版本
-安装shadowsocks Server
-git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; python se">
+<meta name="twitter:title" content="VPS 初始化及科学上网配置">
+<meta name="twitter:description" content="本位主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚邀请链接。">
     
     
     
@@ -132,7 +126,7 @@ git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; pyth
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            VPS 初始化及翻墙配置
+            VPS 初始化及科学上网配置
         </h1>
     
     <div class="post-meta">
@@ -147,7 +141,9 @@ git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; pyth
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h2 id="vps_初始化配置">vps 初始化配置</h2><h2 id="Shadowsocks_Server配置">Shadowsocks Server配置</h2><p><a href="https://github.com/shadowsocks" target="_blank" rel="external">shadowsocks github 主页</a>,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="external">Server版本</a></p>
+            <p>本位主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚<a href="http://www.vultr.com/?ref=6844836" target="_blank" rel="external">邀请链接</a>。</p>
+<a id="more"></a>
+<h2 id="vps_初始化配置">vps 初始化配置</h2><h2 id="Shadowsocks_Server配置">Shadowsocks Server配置</h2><p><a href="https://github.com/shadowsocks" target="_blank" rel="external">shadowsocks github 主页</a>,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="external">Server版本</a></p>
 <p>安装shadowsocks Server</p>
 <pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/shadowsocks/shadowsocks.git &amp;&amp; <span class="keyword">python</span> setup.<span class="keyword">py</span> install
 </code></pre><p>在/etc目录<em>(此目录非强制，放在该目录下只是遵循惯例)</em>创建配置文件(shadowsocks.json)或将准备好的配置文件拷贝此处。配置参数请参考<a href="http://shadowsocks.org/en/config/quick-guide.html" target="_blank" rel="external">基本配置范例</a></p>
