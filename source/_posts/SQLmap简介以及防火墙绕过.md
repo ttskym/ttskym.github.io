@@ -1,11 +1,8 @@
 title: SQLmap简介以及防火墙绕过
 date: 2014-05-17 2:30:41
-category: 
- - 网络安全
- - 外文翻译
-authors:  
 tags: 
  - Sqlmap
+ - 翻译
 ---
 
 -----------------------

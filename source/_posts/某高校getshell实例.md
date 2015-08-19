@@ -1,7 +1,5 @@
 title: 某高校getshell实例
 date: 2014-05-24 21:17:41
-category: 网络安全
-authors: ttskym 
 tags: 
  - 渗透
  - SQL注入

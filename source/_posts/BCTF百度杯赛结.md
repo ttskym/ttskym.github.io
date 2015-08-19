@@ -1,7 +1,5 @@
 title: BCTF百度杯赛结
 date: 2014-04-28 23:46:41
-category: 网络安全
-authors: ttskym 
 tags: 
  - CTF
 ---

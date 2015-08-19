@@ -1,7 +1,5 @@
 title: 江湖兵器谱（Web篇）
 date: 2014-03-18 10:46:41
-category: 网络安全
-authors: ttskym 
 tags: 
  - 工具
  - Metasploit

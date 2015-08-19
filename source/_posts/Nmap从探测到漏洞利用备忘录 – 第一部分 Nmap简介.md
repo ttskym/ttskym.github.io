@@ -1,11 +1,8 @@
 title: Nmap从探测到漏洞利用备忘录 – 第一部分 Nmap简介
 date: 2014-05-17 2:50:41
-category: 
- - 网络安全
- - 外文翻译
-authors:  ttskym
 tags: 
  - Nmap
+ - 翻译
 ---
 
 
