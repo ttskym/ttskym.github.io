@@ -6,41 +6,32 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Lion Blog">
-    <title>某高校getshell实例 - Lion Blog</title>
+    <title> - Lion Blog</title>
     <meta name="author" content="Lion">
     
     
-    <meta name="description" content="写篇文章，记录下渗透某高校网站过程及思路，顺便简单科普下SQL注入和文件上传。
-目标链接：
-http://xxx.xxx.edu.cn/html/Index/article/id/239
-用单引号和 and 1=1 测试了下id，发现可以注入，便丢给了SQLmap
-python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
+    <meta name="description" content="###vps 初始化配置
+###Shadowsocks Server配置
+shadowsocks github 主页,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本Server版本
+安装shadowsocks Server
+git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; p">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="某高校getshell实例">
-<meta property="og:url" content="http:/某高校getshell实例/index.html">
+<meta property="og:title" content="Lion Blog">
+<meta property="og:url" content="http:/vps初始化及翻墙配置/index.html">
 <meta property="og:site_name" content="Lion Blog">
-<meta property="og:description" content="写篇文章，记录下渗透某高校网站过程及思路，顺便简单科普下SQL注入和文件上传。
-目标链接：
-http://xxx.xxx.edu.cn/html/Index/article/id/239
-用单引号和 and 1=1 测试了下id，发现可以注入，便丢给了SQLmap
-python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/1.png">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/2.png">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/3.png">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/4.jpg">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/5.jpg">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/7.png">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/8.png">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/9.png">
-<meta property="og:image" content="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/10.png">
-<meta property="og:updated_time" content="2015-08-19T06:18:34.000Z">
+<meta property="og:description" content="###vps 初始化配置
+###Shadowsocks Server配置
+shadowsocks github 主页,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本Server版本
+安装shadowsocks Server
+git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; p">
+<meta property="og:updated_time" content="2015-08-19T06:38:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="某高校getshell实例">
-<meta name="twitter:description" content="写篇文章，记录下渗透某高校网站过程及思路，顺便简单科普下SQL注入和文件上传。
-目标链接：
-http://xxx.xxx.edu.cn/html/Index/article/id/239
-用单引号和 and 1=1 测试了下id，发现可以注入，便丢给了SQLmap
-python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
+<meta name="twitter:title" content="Lion Blog">
+<meta name="twitter:description" content="###vps 初始化配置
+###Shadowsocks Server配置
+shadowsocks github 主页,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本Server版本
+安装shadowsocks Server
+git clone https://github.com/shadowsocks/shadowsocks.git &amp;amp;&amp;amp; p">
     
     
     
@@ -147,13 +138,13 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            某高校getshell实例
+            (sem título)
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Sat May 24 2014 21:17:41 GMT+0800">
+    <time itemprop="datePublished" content="Wed Aug 19 2015 14:38:59 GMT+0800">
 	
-		    24/05/2014
+		    19/08/2015
     	
     </time>
     
@@ -162,47 +153,49 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>写篇文章，记录下渗透某高校网站过程及思路，顺便简单科普下SQL注入和文件上传。</p>
-<p>目标链接：</p>
-<p><a href="http://xxx.xxx.edu.cn/html/Index/article/id/239" target="_blank" rel="external">http://xxx.xxx.edu.cn/html/Index/article/id/239</a></p>
-<p>用单引号和 and 1=1 测试了下id，发现可以注入，便丢给了SQLmap</p>
-<p><code>python sqlmpyp.py -u &quot;http://xxx.xxx.edu.cn/html/Index/article/id/239&quot;</code></p>
-<p>-u 指定目标链接<br><a id="more"></a></p>
-<p>果然，如图所示</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/1.png" alt="1.jpg"></p>
-<p>接着，顺手又列了库</p>
-<p><code>python sqlmpyp.py -u &quot;http://xxx.xxx.edu.cn/html/Index/article/id/239&quot; --dbs</code></p>
-<p>–dbs 列出数据库</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/2.png" alt="2.jpg"></p>
-<p>猜想job，zs，zsjyc应该是对应着三个网站的库，输入下域名，验证后三个库对应着三个使用一套模版的网站，都存在SQL注入。</p>
-<p>这样想来密码应该不难拿到。但是接下来，用google搜，扫路径，都没有找到后台。只能另寻它法。</p>
-<p>仔细翻了下路径遍历的结果，发现了这样一个记录</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/3.png" alt="3.jpg"></p>
-<p>phpMyAdmin映入眼帘。</p>
-<p>phpMyAdmin的账户密码存存储在mysql库中的user表中，从上面列出的数据库中我们便可以找到mysql库。</p>
-<p>dump下myslq库中的user表，顺利拿到phpMyAdmin密码。</p>
-<p><code>python sqlmpyp.py -u &quot;http://xxx.xxx.edu.cn/html/Index/article/id/239&quot; -D mysql -T user --dump</code></p>
-<p>-D 指定数据库</p>
-<p>-T 指定数据库中某表</p>
-<p>–dump 下载表内容</p>
-<p>登陆后，仔细翻了一下数据库，发现了后台的路径。</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/4.jpg" alt="4.jpg"></p>
-<p>用库中查到的后台密码，顺利登入后台管理。</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/5.jpg" alt="5.jpg"></p>
-<p>接下来要上马了。</p>
-<p>试了下，明显过滤了后缀，拿出burpsuit，果然只是在前台验证了上传类型，绕过它。这个后台上传文件需要分两步，首先选择本地文件上传，上传成功后，还需要再保存，这个文件才算成功上传到服务器。如下图</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/7.png" alt="7.png"></p>
-<p>另外后台对上传文件的主名进行了加密，浏览器不能直接通过加密前文件名访问，只能通过加密后的文件名访问。这里猜想应该是做了一个映射。如下两图，用burpsuit成功绕过。</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/8.png" alt="8.png"></p>
-<p>图中标注的这个文件名应该是需要在服务器端存储的文件名。这里已经将.jpg后缀改为了.php后缀。</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/9.png" alt="9.png"></p>
-<p>此图中下划线标注的文件名猜测可能是外部访问的文件名，这个文件名英语上幅图中的文件名相同。这里要将其后缀改为.php。</p>
-<p>笔者尝试过有一处不改都无法成功访问上传的马。</p>
-<p>下图为用中国菜刀成功访问上传好的一句话木马。</p>
-<p><img src="http://novsec.qiniudn.com/%E6%9F%90%E9%AB%98%E6%A0%A1getshell%E5%AE%9E%E4%BE%8B/10.png" alt="10.jpg"></p>
-<p><em>end</em></p>
-<p><strong>声明：Novsec文章均为原创，转载请注明出自novsec.com</strong></p>
+            <p>###vps 初始化配置</p>
+<p>###Shadowsocks Server配置</p>
+<p><a href="https://github.com/shadowsocks" target="_blank" rel="external">shadowsocks github 主页</a>,包含了client和Sever众多版本，这里是我们需要的已经编译好的python版本<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="external">Server版本</a></p>
+<p>安装shadowsocks Server</p>
+<pre><code>git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/shadowsocks/shadowsocks.git &amp;&amp; <span class="keyword">python</span> setup.<span class="keyword">py</span> install
+</code></pre><p>在/etc目录<em>(此目录非强制，放在该目录下只是遵循惯例)</em>创建配置文件(shadowsocks.json)或将准备好的配置文件拷贝此处。配置参数请参考<a href="http://shadowsocks.org/en/config/quick-guide.html" target="_blank" rel="external">基本配置范例</a></p>
+<p>以后台守护进程模式指定配置文件启动程序。</p>
+<pre><code>ssserver -c /etc/shadowsocks.json -d <span class="operator"><span class="keyword">start</span>
 
+-<span class="keyword">c</span> CONFIG              <span class="keyword">path</span> <span class="keyword">to</span> config <span class="keyword">file</span>&lt;br&gt;
+-<span class="keyword">d</span> <span class="keyword">start</span>/<span class="keyword">stop</span>/restart  daemon <span class="keyword">mode</span></span>
+</code></pre><p>执行<code>ps -ef|grep shadowsocks</code>，可见后台进程。</p>
+<p>将ssserver启动脚本添加进/etc/rc.local，重启后可自动启动。</p>
+<p>###PPTP Server配置</p>
+<p>安装pptpd后，配置/etc/ppp/pptpd-options(options.pptpd)，/etc/pptpd.conf及/etc/ppp/chap-secrets三个文件。</p>
+<p>pptpd-options 配置清单</p>
+<pre><code>name pptpd
+refuse-pap
+refuse-chap
+refuse-mschap
+require-mschap-v2
+require-mppe-<span class="number">128</span>
+proxyarp
+lock
+nobsdcomp 
+novj
+novjccomp
+nologfd
+ms-dns <span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span>
+ms-dns <span class="number">8.8</span><span class="number">.4</span><span class="number">.4</span>
+</code></pre><p>pptpd是服务器的名字，默认拒绝使用pap、chap和mschap认证，而采用mschap-v2进行认证，加密采用128位的mppe方式加密。ms-dns配置的是VPN client连接上VPN服务器之后获得的DNS，需要配置自己所在地的运营商的DNS也可以是第三方的DNS。ms—dns是需要我们手动添加的，其他的参数为配置文件默认。</p>
+<p>pptpd.conf文件主要配置localip和remoteip。localip为服务器VPN虚拟接口将分配的IP地址，可设置为与VPN服务器内网地址相同网段的IP，也可以设置为另一网段的IP；remoteip为客户端VPN连接成功后将分配的IP地址段，同样可设置为与VPN服务器内网地址相同网段的IP地址段，也可以设置为另一网段的IP地址段。</p>
+<p>/etc/ppp/chap-secrets 进行配置，内容如下：client对应客户端登录用户名，secret为密码，ip为随机分配刚才remoteip池中的地址，也可以自己指定用户连接VPN之后获取的IP地址，server则为服务名。</p>
+<p>sysctl.conf中设置net.ipv4.ip_forward = 1 开启系统路由模式。其他的设置为安全设置。</p>
+<p>最后，配置iptables。</p>
+<pre><code>iptables -F <span class="comment">//将默认的防火墙策略清空，否则往往配置正确却无法试用！！！！</span>
+
+iptables -t nat -A POSTROUTING -j SNAT --to-source <span class="label">$myIP</span> -o eth+ <span class="comment">//配置防火墙NAT转发</span>
+
+iptables -A <span class="keyword">INPUT</span> -p tcp -<span class="keyword">m</span> tcp --dport 1723 -j ACCEPT  <span class="comment">//为PPTPD的1723端口开启策略</span>
+
+service iptables <span class="keyword">save</span>  <span class="comment">//将上述防火墙策略保存，重启后自动载入，否则重启后策略清空。</span>
+</code></pre>
             
                 
 
@@ -211,19 +204,12 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
     </div>
     <div class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">ETIQUETADO em</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/SQL注入/">SQL注入</a> <a class="tag tag--primary tag--small t-link" href="/tags/文件上传/">文件上传</a> <a class="tag tag--primary tag--small t-link" href="/tags/渗透/">渗透</a>
-
-            </div>
-        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/拒绝服务攻击/"  data-tooltip="拒绝服务攻击初探">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
@@ -231,7 +217,7 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Nmap从探测到漏洞利用备忘录 – 第一部分 Nmap简介/" data-tooltip="Nmap从探测到漏洞利用备忘录 – 第一部分 Nmap简介">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/拒绝服务攻击/" data-tooltip="拒绝服务攻击初探">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">PRÓXIMO</span>
                     <i class="fa fa-angle-right"></i>
@@ -246,17 +232,17 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http:/某高校getshell实例/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http:/某高校getshell实例/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http:/某高校getshell实例/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -298,7 +284,7 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/拒绝服务攻击/"  data-tooltip="拒绝服务攻击初探">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
@@ -306,7 +292,7 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Nmap从探测到漏洞利用备忘录 – 第一部分 Nmap简介/" data-tooltip="Nmap从探测到漏洞利用备忘录 – 第一部分 Nmap简介">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/拒绝服务攻击/" data-tooltip="拒绝服务攻击初探">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">PRÓXIMO</span>
                     <i class="fa fa-angle-right"></i>
@@ -321,17 +307,17 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http:/某高校getshell实例/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http:/某高校getshell实例/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http:/某高校getshell实例/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -357,17 +343,17 @@ python sqlmpyp.py -u &amp;quot;http://xxx.xxx.edu.cn/html/Index/article">
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http:/某高校getshell实例/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http:/某高校getshell实例/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http:/某高校getshell实例/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http:/vps初始化及翻墙配置/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
