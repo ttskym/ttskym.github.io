@@ -82,11 +82,11 @@ sidebar:
         #     title: global.mail
         #     url: mailto:
         #     icon: envelope-o
-    rss:
-        rss:
-            title: global.rss
-            url: /atom.xml
-            icon: rss
+        #    rss:
+        #rss:
+        #    title: global.rss
+        #    url: /atom.xml
+        #    icon: rss
 
 
 # Header configuration
