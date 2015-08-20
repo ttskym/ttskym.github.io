@@ -10,31 +10,16 @@
     <meta name="author" content="Lion">
     
     
-    <meta name="description" content="DoS     传统的拒绝服务攻击DDoS     分布式拒绝服务攻击DRDoS     分布式反射拒绝服务攻击
-###DoS
-攻击方法分类：
-
-利用软件缺陷实现，有些软件在编写过程中对某些特定的请求和服务没有处理。
-利用协议的漏洞，如SYN FLOOD">
+    <meta name="description" content="DoS     传统的拒绝服务攻击DDoS     分布式拒绝服务攻击DRDoS     分布式反射拒绝服务攻击">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="拒绝服务攻击初探">
 <meta property="og:url" content="http://ttskym.github.io/拒绝服务攻击/index.html">
 <meta property="og:site_name" content="Lion Blog">
-<meta property="og:description" content="DoS     传统的拒绝服务攻击DDoS     分布式拒绝服务攻击DRDoS     分布式反射拒绝服务攻击
-###DoS
-攻击方法分类：
-
-利用软件缺陷实现，有些软件在编写过程中对某些特定的请求和服务没有处理。
-利用协议的漏洞，如SYN FLOOD">
-<meta property="og:updated_time" content="2015-08-19T06:18:17.000Z">
+<meta property="og:description" content="DoS     传统的拒绝服务攻击DDoS     分布式拒绝服务攻击DRDoS     分布式反射拒绝服务攻击">
+<meta property="og:updated_time" content="2015-08-20T05:29:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拒绝服务攻击初探">
-<meta name="twitter:description" content="DoS     传统的拒绝服务攻击DDoS     分布式拒绝服务攻击DRDoS     分布式反射拒绝服务攻击
-###DoS
-攻击方法分类：
-
-利用软件缺陷实现，有些软件在编写过程中对某些特定的请求和服务没有处理。
-利用协议的漏洞，如SYN FLOOD">
+<meta name="twitter:description" content="DoS     传统的拒绝服务攻击DDoS     分布式拒绝服务攻击DRDoS     分布式反射拒绝服务攻击">
     
     
     
@@ -171,15 +156,13 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <hr>
-<p>DoS     传统的拒绝服务攻击<br>DDoS     分布式拒绝服务攻击<br>DRDoS     分布式反射拒绝服务攻击</p>
-<p>###DoS</p>
-<p>攻击方法分类：</p>
+            <p>DoS     传统的拒绝服务攻击<br>DDoS     分布式拒绝服务攻击<br>DRDoS     分布式反射拒绝服务攻击</p>
+<a id="more"></a>
+<h2 id="DoS">DoS</h2><p>攻击方法分类：</p>
 <ol>
 <li>利用软件缺陷实现，有些软件在编写过程中对某些特定的请求和服务没有处理。</li>
 <li>利用协议的漏洞，如SYN FLOOD</li>
 </ol>
-<a id="more"></a>
 <p>实现思路：</p>
 <ol>
 <li><p>SYN FLOOD</p>
@@ -198,8 +181,7 @@
 <p> 如果服务器可以没有限制地执行写操作，那么都能成为塞满硬盘造成DoS攻击的途径。如发送垃圾邮件，让日志记录满等。</p>
 </li>
 </ol>
-<p>###DDoS</p>
-<p>DDoS与DoS的区别</p>
+<h2 id="DDoS">DDoS</h2><p>DDoS与DoS的区别</p>
 <p>DoS主要是针对处理能力比较弱的单机，而DDoS是借助数百，甚至数千台被植入攻击守护进程的攻击主机同时发起的集团作战行为。通常攻击者通过控制一台控制机类操作众多的傀儡机，来隐藏自己的踪迹向目标网络发起攻击。</p>
 <p>DDoS的规模</p>
 <p>多大的规模才能算是发起了DDoS攻击，根据统计，65Gbps的规模排在了攻击中的前5%。</p>
@@ -216,8 +198,7 @@
 <p> 代表性的是Slowloris。HTTP协议规定，HTTP Request以\r\n\r\n结尾表示客户端发送结束，服务端开始处理。Slowloris就是利用这一点来做DDoS攻击的。攻击者在HTTP请求头中将Connection设置为KeepAlive，要求WebServer保持TCP连接不要断开，随后缓慢地每隔几分钟发送一个key-value格式的数据到服务端，如a:b\r\n，导致服务端认为HTTP头部没有接收完成而一直等待。如果攻击者使用多线程或者傀儡机来做同样的操作，服务器的Web容器很快就被攻击者占满了TCP连接而不再接受新的请求。</p>
 </li>
 </ol>
-<p>###DRDoS</p>
-<p>DRDoS攻击的原理是攻击者伪造成受害者的IP地址，向互联网上大量开放特定服务的主机发起请求，接收到请求的那些主机根据源IP地址将响应数据包返回给受害者。一般来说，攻击者会使用响应包远大于请求包的服务来利用，这样才可以以较小的流量换取交大的流量去攻击，几十倍的放大攻击。能利用来做放大反射攻击的服务，常见的有DNS服务、NTP服务、SNMP服务、Chargen服务等等，甚至某些online游戏服务器也被利用来参与攻击。</p>
+<h2 id="DRDoS">DRDoS</h2><p>DRDoS攻击的原理是攻击者伪造成受害者的IP地址，向互联网上大量开放特定服务的主机发起请求，接收到请求的那些主机根据源IP地址将响应数据包返回给受害者。一般来说，攻击者会使用响应包远大于请求包的服务来利用，这样才可以以较小的流量换取交大的流量去攻击，几十倍的放大攻击。能利用来做放大反射攻击的服务，常见的有DNS服务、NTP服务、SNMP服务、Chargen服务等等，甚至某些online游戏服务器也被利用来参与攻击。</p>
 <p>DRDos攻击具有一个特殊的流量放大属性，基于UDP和TCP都可以得到利用，但是基于TCP的DRDoS发起难度较大，所以主要集中到基于UDP的反射放大攻击。</p>
 <p>基于NTP的反射放大攻击</p>
 <blockquote>
