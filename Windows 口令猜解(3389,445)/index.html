@@ -10,20 +10,20 @@
     <meta name="author" content="Lion">
     
     
-    <meta name="description" content="口令猜解事远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务和终端服务/远程桌面服务两种进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，用以利用smb协议猜解，而hydra还支持rdp协议的猜解。">
+    <meta name="description" content="口令猜解是远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务以及终端服务/远程桌面服务两种服务进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，利用smb协议猜解，此外hydra还支持rdp协议的猜解。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Windows 口令猜解(445，3389)">
 <meta property="og:url" content="http://lion.novsec.com/Windows 口令猜解(3389,445)/index.html">
 <meta property="og:site_name" content="Lion Blog">
-<meta property="og:description" content="口令猜解事远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务和终端服务/远程桌面服务两种进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，用以利用smb协议猜解，而hydra还支持rdp协议的猜解。">
+<meta property="og:description" content="口令猜解是远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务以及终端服务/远程桌面服务两种服务进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，利用smb协议猜解，此外hydra还支持rdp协议的猜解。">
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o1.png">
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o2.png">
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o3.png">
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/0o4.png">
-<meta property="og:updated_time" content="2015-08-25T04:42:17.000Z">
+<meta property="og:updated_time" content="2015-08-25T04:51:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows 口令猜解(445，3389)">
-<meta name="twitter:description" content="口令猜解事远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务和终端服务/远程桌面服务两种进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，用以利用smb协议猜解，而hydra还支持rdp协议的猜解。">
+<meta name="twitter:description" content="口令猜解是远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务以及终端服务/远程桌面服务两种服务进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，利用smb协议猜解，此外hydra还支持rdp协议的猜解。">
     
     
     
@@ -148,11 +148,11 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>口令猜解事远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务和终端服务/远程桌面服务两种进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，用以利用smb协议猜解，而hydra还支持rdp协议的猜解。</p>
+            <p>口令猜解是远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务以及终端服务/远程桌面服务两种服务进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，利用smb协议猜解，此外hydra还支持rdp协议的猜解。</p>
 <a id="more"></a>
-<h2 id="文件和打印共享服务">文件和打印共享服务</h2><p>windows7后的版本虽然在文件和打印共享服务的默认配置中提高了某种意义上的安全性，但是它可能成为我们攻破Windows的重要突破口。</p>
-<p>Windows SMB协议是文件和打印共享服务的基础，与它对应的端口号是445。<em>此外文件和打印共享服务和NETBIOS也有关联，它对应UDP的137，138和TCP的139服务。</em>(但是根据我在windows7上的测试，139端口和NETBIOS并不是我们进行NetBIOS话查点，口令猜解的必要条件。)</p>
-<p>从Vista，win7(公共网络模式)，Sever 2008后的默认配置中都不能从远程访问SMB，因为Windows防火墙的默认配置阻止了这种访问。但是域控是例外，它会自动配置重新开发SMB服务。以Windows 7为例开启SMB服务的方法有三种：打开文件和打印共享，不需开启网络发现(默认关闭)，在Windows防火墙中为文件和打印共享开启例外以及在防火墙高级配置的入站规则里开启对应配置文件的文件和打印共享(smb-in)。其实三者是相互关联的，如果以第一种方式操作，那么防火墙会自动允许共享程序通过，高级配置中NetBIOS和SMB的相关规则也会开启。不过，如果采用第三种方式，在高级配置中不开启NetBIOS，经测试，不影响口令猜解和会话查点，但会影响NetBIOS，但会阻碍NetBIOS名字服务查点。三种操作依次如下图所示。</p>
+<h2 id="文件和打印共享服务">文件和打印共享服务</h2><p>从某种意义上说，windows7后的版本在文件和打印共享服务的默认配置中提高安全性，但是它仍然可能成为我们攻破Windows的重要突破口。</p>
+<p>Windows SMB协议是文件和打印共享服务的基础，与它对应的端口号是445。<em>此外文件和打印共享服务和NETBIOS也有关联，它对应UDP的137，138和TCP的139服务。</em>(但是根据我在windows7上的测试，139端口和NETBIOS并不是我们进行NetBIOS会话查点、口令猜解的必要条件。)</p>
+<p>从Vista，win7(公共网络模式)，Sever 2008后的默认配置中都不能从远程访问SMB，因为Windows防火墙的默认配置阻止了这种访问。但是域控是例外，它会自动配置重新开放SMB服务。以Windows 7为例，开启SMB服务的方法有三种：打开文件和打印共享，不需开启网络发现(默认关闭)、在Windows防火墙中为文件和打印共享开启例外以及在防火墙高级配置的入站规则里开启对应配置文件的文件和打印共享(smb-in)。其实三者是相互关联的，如果以第一种方式操作，那么防火墙会自动允许共享程序通过，高级配置中NetBIOS和SMB的相关规则也会开启。不过，如果采用第三种方式，在高级配置中不开启NetBIOS，经测试，不影响口令猜解和会话查点，但会影响NetBIOS，但会阻碍NetBIOS名字服务查点。三种操作依次如下图所示。</p>
 <div class="figure fig-33 nocaption"><a class="fancybox" href="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o1.png" title="开启共享设置 001.png" target="_blank" rel="external"><img class="fig-img" src="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o1.png" width="" height="" alt="开启共享设置 001.png"></a></div>
 <div class="figure fig-33 nocaption"><a class="fancybox" href="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o2.png" title="开启例外 02.png" target="_blank" rel="external"><img class="fig-img" src="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o2.png" width="" height="" alt="开启例外 02.png"></a></div>
 <div class="figure fig-33 nocaption"><a class="fancybox" href="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o3.png" title="开启smb 03.png" target="_blank" rel="external"><img class="fig-img" src="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o3.png" width="" height="" alt="开启smb 03.png"></a></div>
