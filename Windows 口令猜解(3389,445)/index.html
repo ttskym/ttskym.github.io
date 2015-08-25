@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o2.png">
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o3.png">
 <meta property="og:image" content="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/0o4.png">
-<meta property="og:updated_time" content="2015-08-25T04:34:05.000Z">
+<meta property="og:updated_time" content="2015-08-25T04:42:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows 口令猜解(445，3389)">
 <meta name="twitter:description" content="口令猜解事远程攻击Windows系统的重要方式之一。比较常用的是利用文件和打印共享服务和终端服务/远程桌面服务两种进行猜解。众多的自动化猜解工具中，以medusa和hydra表现较好，两者都包含smb模块，用以利用smb协议猜解，而hydra还支持rdp协议的猜解。">
@@ -157,14 +157,14 @@
 <div class="figure fig-33 nocaption"><a class="fancybox" href="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o2.png" title="开启例外 02.png" target="_blank" rel="external"><img class="fig-img" src="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o2.png" width="" height="" alt="开启例外 02.png"></a></div>
 <div class="figure fig-33 nocaption"><a class="fancybox" href="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o3.png" title="开启smb 03.png" target="_blank" rel="external"><img class="fig-img" src="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/o3.png" width="" height="" alt="开启smb 03.png"></a></div>
 <p>windows可以自定义共享，也有默认共享，可以使用net share查看。其中IPC$用来建立会话链接。</p>
-<p>建立空会话：net use \IP\IPC$ “” /u:“”</p>
+<p>建立空会话：net use \IP\IPC$ “” /u:””</p>
 <p>利用net use口令猜解：net use \IP\IPC$ “PASSWORD” /u:”username”<br><br>(如果只用账户名去登录目标系统不成功时，可以使用domain\username，其中domain可以直接使用IP替代，经测试win10符合这种情况)</p>
 <p>medusa和hydra口令猜解：这两种工具都内置在kali中，具体的使用方法，请查看名ing提示帮助。其中hydra的提示中包含具体的模块，而medusa 需要在-M参数后使用Tab键来提示。</p>
 <h2 id="NetBIOS名字服务查点">NetBIOS名字服务查点</h2><p>NetBIOS名字服务查点一般适用于本地局域网</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">查点共享卷：net view \\IP(\\ServerName)</span><br><span class="line">查点工作组和域：net view /domain</span><br><span class="line">查点域里的计算机：net view /domain:DomainName</span><br><span class="line">查点域控：nltest /dclist:DomainName</span><br><span class="line">查点NetBIOS名字表: nbtstat -A IP</span><br><span class="line">linux 工具(需下载): nmbscan</span><br></pre></td></tr></table></figure>
 <h2 id="相关服务">相关服务</h2><p>对应的服务有三个：server[lanmanserver],workstation[lanmanwork],Tcp/IP NetBIOS Helper。经测试，主要<strong>禁用</strong>server服务，口令猜解，空会话查点无法实施。可关闭445端口。另外在对应网卡中禁用NetBIOS可关闭139端口，如下图所示。</p>
 <div class="figure center nocaption"><a class="fancybox" href="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/0o4.png" title="4.png" target="_blank" rel="external"><img class="fig-img" src="http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/0o4.png" width="350" height="350" alt="4.png"></a></div>
-<p>关闭后可以用nmap扫描或者<code>nbstat -an</code>来看下以上端口是否还处于监听状态。</p>
+<p>关闭后可以用nmap扫描或者<code>netstat -an</code>来看下以上端口是否还处于监听状态。</p>
 <h2 id="防范对策">防范对策</h2><ul>
 <li>确保共享设置中文件和打印共享关闭(对应好配置文件：分为家庭，公用，域)</li>
 <li>网络防火墙限制相应端口和主机防火墙限制相应程序和服务的访问</li>
@@ -172,8 +172,7 @@
 </ul>
 <h2 id="终端服务/远程桌面服务">终端服务/远程桌面服务</h2><p>这个服务比较常见，通常我们用mstsc连接远程桌面的时候，就会用到它，它监听3389端口，可以利用hydra的rdp模块来猜解口令。</p>
 <p>windows的默认配置中不开启。远程设置的开启有两个选项：一个是允许任意连接，二是仅允许网络身份级别连接。经测试，第二种方式只有windows上的远程桌面工具可以连接。而我们的自动化猜解只适用于在允许任意连接情况下。</p>
-<p>Ref</p>
-<p><a href="http://www.163164.com/jiqiao/163164com011.htm" target="_blank" rel="external">IPC$命令详解 </a></p>
+<p>[Ref]:<br><a href="http://www.163164.com/jiqiao/163164com011.htm" target="_blank" rel="external">IPC$命令详解 </a></p>
 
             
                 
