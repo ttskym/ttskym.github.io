@@ -24,7 +24,7 @@ Windows SMB协议是文件和打印共享服务的基础，与它对应的端口
 
 windows可以自定义共享，也有默认共享，可以使用net share查看。其中IPC$用来建立会话链接。
 
-建立空会话：net use \\IP\IPC$ "" /u:“”
+建立空会话：net use \\IP\IPC$ "" /u:""
 
 利用net use口令猜解：net use \\IP\IPC$ "PASSWORD" /u:"username"</br>
 (如果只用账户名去登录目标系统不成功时，可以使用domain\username，其中domain可以直接使用IP替代，经测试win10符合这种情况)
@@ -52,7 +52,7 @@ linux 工具(需下载): nmbscan
 
 {% image fancybox center nocaption http://7xl89b.com1.z0.glb.clouddn.com/Windows口令猜解(445，3389)/0o4.png 350 350 "4.png" %}
 
-关闭后可以用nmap扫描或者`nbstat -an`来看下以上端口是否还处于监听状态。
+关闭后可以用nmap扫描或者`netstat -an`来看下以上端口是否还处于监听状态。
 
 防范对策
 ---
@@ -68,6 +68,5 @@ linux 工具(需下载): nmbscan
 
 windows的默认配置中不开启。远程设置的开启有两个选项：一个是允许任意连接，二是仅允许网络身份级别连接。经测试，第二种方式只有windows上的远程桌面工具可以连接。而我们的自动化猜解只适用于在允许任意连接情况下。
 
-Ref
-
+[Ref]:
 [IPC$命令详解 ](http://www.163164.com/jiqiao/163164com011.htm)
