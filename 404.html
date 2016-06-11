@@ -10,6 +10,7 @@
     <meta name="author" content="Lion">
     
     
+    
     <meta name="description">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Lion Blog">
@@ -22,6 +23,8 @@
 <meta name="twitter:description">
     
     
+        
+    
     
         <meta property="og:image" content="https://www.gravatar.com/avatar/b5b5dd13b948b839b11901d47efee3a4?s=640"/>
     
@@ -29,31 +32,51 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
     <!--STYLES END-->
+    
     
 </head>
 
     <body>
         <div id="blog">
-            <header id="header" data-behavior="1">
+            <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <h1 class="header-title">
         <a class="header-title-link" href="/ ">Lion Blog</a>
     </h1>
     
-        <a class="header-right-picture" href="/#about">
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
             <img class="header-picture" src="https://www.gravatar.com/avatar/b5b5dd13b948b839b11901d47efee3a4?s=90"/>
+        
         </a>
     
 </header>
-            <nav id="sidebar" data-behavior="1">
+
+            <!-- Define author's picture -->
+
+
+    
+
+<nav id="sidebar" data-behavior="1">
     
         <div class="sidebar-profile">
             <a href="/#about">
-                
-                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b5b5dd13b948b839b11901d47efee3a4?s=90"/>
-                
+                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b5b5dd13b948b839b11901d47efee3a4?s=110"/>
             </a>
             <span class="sidebar-profile-name">Lion</span>
         </div>
@@ -69,7 +92,7 @@
                     >
                 
                     <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                    <span class="sidebar-button-desc">Home</span>
+                    <span class="sidebar-button-desc">首页</span>
                 </a>
         </li>
         
@@ -81,19 +104,19 @@
                     >
                 
                     <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                    <span class="sidebar-button-desc">Tags</span>
+                    <span class="sidebar-button-desc">标签</span>
                 </a>
         </li>
         
             <li class="sidebar-button">
                 
-                    <a  class="sidebar-button-link "
+                    <a  class="sidebar-button-link st-search-show-outputs"
                          href="/all-archives"
                         
                     >
                 
                     <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                    <span class="sidebar-button-desc">Archive</span>
+                    <span class="sidebar-button-desc">归档</span>
                 </a>
         </li>
         
@@ -105,7 +128,7 @@
                     >
                 
                     <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                    <span class="sidebar-button-desc">About</span>
+                    <span class="sidebar-button-desc">关于</span>
                 </a>
         </li>
         
@@ -129,7 +152,7 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            (no title)
+            (无标题)
         </h1>
     
     <div class="post-meta">
@@ -146,12 +169,9 @@
         <div class="main-content-wrap">
             <iframe scrolling="no" frameborder="0" src="http://yibo.iyiyun.com/js/yibo404/key/" width="640" height="462" style="display:block;"></iframe>
             
-                
-
-            
         </div>
     </div>
-    <div class="post-footer main-content-wrap">
+    <div id="post-footer" class="post-footer main-content-wrap">
         
         <div class="post-actions-wrap">
     <nav>
@@ -161,14 +181,14 @@
                     <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     <a class="post-action-btn btn btn--disabled">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
             </li>
@@ -214,22 +234,11 @@
 
 
         
-            <div id="disqus_thread">
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'li0n';
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    
-     })();
-</script>
+            
+                <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-
+            
         
     </div>
 </article>
@@ -240,13 +249,17 @@
     <span class="copyrights">
         Copyrights &copy; 2016 Lion. All Rights Reserved.
     </span>
-</script>
 </footer>
 
             </div>
             
         </div>
-        <div id="about">
+        
+
+
+    
+
+<div id="about">
     <div id="about-card">
         <div id="about-btn-close">
             <i class="fa fa-remove"></i>
@@ -255,33 +268,56 @@
             <img id="about-card-picture" src="https://www.gravatar.com/avatar/b5b5dd13b948b839b11901d47efee3a4?s=110"/>
         
             <h4 id="about-card-name">Lion</h4>
-       <!-- 
-       //     <h5 id="about-card-bio"><p>author.bio</p>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
 </h5>
-       //  
+        
         
             <h5 id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>中科院 硕士在读</p>
+                <p>author.job</p>
 
             </h5>
-         -->
         
-           <center> <h5 id="about-card-location">
+        
+            <h5 id="about-card-location">
                 <i class="fa fa-map-marker"></i>
                 <br/>
-                Beijing China
-            </h5></>
+                BeiJing China
+            </h5>
         
     </div>
 </div>
 
-        <div id="cover" style="background-image:url('http://7xl89b.com1.z0.glb.clouddn.com/blog/background.jpg');"></div>
+        
+<div id="cover" style="background-image:url('http://7xl89b.com1.z0.glb.clouddn.com/blog/background.jpg');"></div>
     </body>
     <!--SCRIPTS-->
-<script src="/assets/js/script.min.js"></script>
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.fancybox.js"></script>
+<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/assets/js/tranquilpeak.js"></script>
 <!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://ttskym.github.io/404.html';
+                 
+                    this.page.identifier = '404.html';
+                                  
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'Li0n';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
     <script type="text/javascript">
