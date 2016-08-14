@@ -1,5 +1,5 @@
 title: Git Command CheetSheet
-date: 2016-06-110 18:21:38
+date: 2016-06-11 18:21:38
 tags:
   - github
 ---
@@ -12,6 +12,8 @@ git rm -r -n --cached  [file]   #-n：加上这个参数，执行命令时，是
 git rm -r --cached  [file]  	#最终执行命令
 git commit -m "comment"  
 git push origin master 
+
+git merge [branch]              #合并branch到当前分支
 {% endcodeblock %}
 
 Ref:

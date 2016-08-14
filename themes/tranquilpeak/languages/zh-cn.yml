@@ -56,7 +56,5 @@ post:
     comment_and_share: "注释和共享"
 
 author:
-    # 你的个人简介 (支持 Markdown 和 HTML 语法)
     bio: ""
-    # 你的工作简介
     job: ""
