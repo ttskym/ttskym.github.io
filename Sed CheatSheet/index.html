@@ -11,28 +11,19 @@
     
     
     
-    <meta name="description" content="1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
- 单引号无法用\’转义，而双引号可以使用\”进行转义
-
-1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt
- -i 原地修改">
+    <meta name="description" content="1、 单引号无法用\’转义，而双引号可以使用\”进行转义1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
+2、 -i 原地修改1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Sed CheatSheet">
 <meta property="og:url" content="http://www.novsec.cn/Sed CheatSheet/index.html">
 <meta property="og:site_name" content="Lion Blog">
-<meta property="og:description" content="1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
- 单引号无法用\’转义，而双引号可以使用\”进行转义
-
-1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt
- -i 原地修改">
-<meta property="og:updated_time" content="2016-09-19T02:59:40.000Z">
+<meta property="og:description" content="1、 单引号无法用\’转义，而双引号可以使用\”进行转义1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
+2、 -i 原地修改1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt">
+<meta property="og:updated_time" content="2016-09-19T03:09:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sed CheatSheet">
-<meta name="twitter:description" content="1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
- 单引号无法用\’转义，而双引号可以使用\”进行转义
-
-1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt
- -i 原地修改">
+<meta name="twitter:description" content="1、 单引号无法用\’转义，而双引号可以使用\”进行转义1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
+2、 -i 原地修改1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt">
     
     
         
@@ -180,28 +171,14 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <ol>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">"s/my/lion's/g"</span> exp.txt</span><br></pre></td></tr></table></figure>
-<p> 单引号无法用\’转义，而双引号可以使用\”进行转义</p>
-</li>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">"s/my/lion's/g"</span> exp.txt</span><br></pre></td></tr></table></figure>
-<p> -i 原地修改</p>
-</li>
-</ol>
+            <p>1、 单引号无法用\’转义，而双引号可以使用\”进行转义<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">"s/my/lion's/g"</span> exp.txt</span><br></pre></td></tr></table></figure></p>
+<p>2、 -i 原地修改<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">"s/my/lion's/g"</span> exp.txt</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<ol>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  sed <span class="string">'s/^/#/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/$/--/g'</span> exp.txt</span><br></pre></td></tr></table></figure>
-<p> ^, $均为正则语法，\&lt; 表示词首， >表示词尾。如\&lt;abc表示以abc为首的词</p>
-<p> 正则举例：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/&lt;.*&gt;//g'</span> html.txt (x)</span><br><span class="line">sed <span class="string">'s/&lt;[^&gt;]\*&gt;//g html.txt (v)</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'3s/my/your/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'3,6s/my/your/g'</span> exp.txt</span><br></pre></td></tr></table></figure>
-<p>指定行替换</p>
-</li>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/my/your/1'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/2'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/3g'</span> exp.txt</span><br></pre></td></tr></table></figure>
-<p>指定行内位置替换</p>
-</li>
-</ol>
+<p>3、 ^, $均为正则语法，\&lt; 表示词首， >表示词尾。如<code>\&lt;abc</code>表示以abc为首的词<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/^/#/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/$/--/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
+<p>正则举例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/&lt;.*&gt;//g'</span> html.txt (x)</span><br><span class="line">sed <span class="string">'s/&lt;[^&gt;]*&gt;//g html.txt (v)</span></span><br></pre></td></tr></table></figure>
+<p>4、 指定行替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'3s/my/your/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'3,6s/my/your/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
+<p>5、 指定行内位置替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/my/your/1'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/2'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/3g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
 
             
         </div>
