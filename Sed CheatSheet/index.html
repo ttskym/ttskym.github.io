@@ -15,7 +15,11 @@
  单引号无法用\’转义，而双引号可以使用\”进行转义
 
 sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
- -i 原地修改">
+ -i 原地修改
+
+{ codeblock lang:bash }   sed ‘s/^/#/g’ exp.txt
+sed &apos;s/$/--/g&apos; exp.txt
+ {">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Sed CheatSheet">
 <meta property="og:url" content="http://www.novsec.cn/Sed CheatSheet/index.html">
@@ -24,15 +28,23 @@ sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
  单引号无法用\’转义，而双引号可以使用\”进行转义
 
 sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
- -i 原地修改">
-<meta property="og:updated_time" content="2016-09-18T03:31:45.000Z">
+ -i 原地修改
+
+{ codeblock lang:bash }   sed ‘s/^/#/g’ exp.txt
+sed &apos;s/$/--/g&apos; exp.txt
+ {">
+<meta property="og:updated_time" content="2016-09-19T02:51:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sed CheatSheet">
 <meta name="twitter:description" content="sed &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
  单引号无法用\’转义，而双引号可以使用\”进行转义
 
 sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
- -i 原地修改">
+ -i 原地修改
+
+{ codeblock lang:bash }   sed ‘s/^/#/g’ exp.txt
+sed &apos;s/$/--/g&apos; exp.txt
+ {">
     
     
         
@@ -186,10 +198,22 @@ sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
 </li>
 <li><p><code>sed -i &quot;s/my/lion&#39;s/g&quot; exp.txt</code></p>
 <p> -i 原地修改</p>
-<a id="more"></a>
+</li>
+<li><p>{ codeblock lang:bash }<br>   sed ‘s/^/#/g’ exp.txt</p>
+<pre><code>sed <span class="string">'s/$/--/g'</span> <span class="built_in">exp</span>.txt
+</code></pre><p> { endcodeblock }</p>
+<p>^, $均为正则语法，\&lt; 表示词首， >表示词尾。如\&lt;abc表示以abc为首的词</p>
+<p>正则举例：</p>
+<p>{ codeblock lang:bash }<br>sed ‘s/&lt;.<em>&gt;//g’ html.txt (x)<br>sed ‘s/&lt;[^&gt;]\</em>&gt;//g html.txt (v)<br>{ endblock }</p>
+</li>
+<li><p>{ codeblock lang:bash }<br>sed ‘3s/my/your/g’ exp.txt<br>sed ‘3,6s/my/your/g’ exp.txt<br>{ endblock }<br>指定行替换</p>
+</li>
+<li><p>{ codeblock lang:bash }<br> sed ‘s/my/your/1’ exp.txt<br> sed ‘s/my/your/2’ exp.txt<br> sed ‘s/my/your/3g’ exp.txt<br>{ endblock }</p>
+<p>指定行内位置替换</p>
 </li>
 </ol>
-
+<pre><code><span class="comment">&lt;!-- more --&gt;</span>
+</code></pre>
             
         </div>
     </div>
