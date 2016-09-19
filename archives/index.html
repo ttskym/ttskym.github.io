@@ -150,7 +150,7 @@
 <section class="postShorten-group main-content-wrap">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -172,7 +172,7 @@
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
+                <div class="postShorten-excerpt" itemprop="articleBody">
                     <ol>
 <li><p><code>sed &quot;s/my/lion&#39;s/g&quot; exp.txt</code></p>
 <p> 单引号无法用\’转义，而双引号可以使用\”进行转义</p>
@@ -180,28 +180,12 @@
 <li><p><code>sed -i &quot;s/my/lion&#39;s/g&quot; exp.txt</code></p>
 <p> -i 原地修改</p>
 </li>
-<li><p>{ codeblock lang:bash }<br>sed ‘s/^/#/g’ exp.txt<br>sed ‘s/$/–/g’ exp.txt<br> { endcodeblock }</p>
-<p>^, $均为正则语法，\&lt; 表示词首， >表示词尾。如\&lt;abc表示以abc为首的词</p>
-<p>正则举例：</p>
-<p>{ codeblock lang:bash }<br>sed ‘s/&lt;.<em>&gt;//g’ html.txt (x)<br>sed ‘s/&lt;[^&gt;]\</em>&gt;//g html.txt (v)<br>{ endcodeblock }</p>
-</li>
-<li><p>{ codeblock lang:bash }<br>sed ‘3s/my/your/g’ exp.txt<br>sed ‘3,6s/my/your/g’ exp.txt<br>{ endcodeblock }<br>指定行替换</p>
-</li>
-<li><p>{ codeblock lang:bash }<br> sed ‘s/my/your/1’ exp.txt<br> sed ‘s/my/your/2’ exp.txt<br> sed ‘s/my/your/3g’ exp.txt<br>{ endcodeblock }</p>
-<p>指定行内位置替换</p>
-</li>
 </ol>
-<pre><code><span class="comment">&lt;!-- more --&gt;</span>
-</code></pre>
                     
+                        <a href="/Sed CheatSheet/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/Sed CheatSheet/#post-footer" class="postShorten-excerpt_link link">
-                                注释和共享
-                            </a>
-                        </p>
                     
                 </div>
             

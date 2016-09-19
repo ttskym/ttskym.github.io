@@ -15,9 +15,7 @@
  单引号无法用\’转义，而双引号可以使用\”进行转义
 
 sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
- -i 原地修改
-
-{ codeblock lang:bash }sed ‘s/^/#/g’ exp.txtsed ‘s/$/–/g’ exp.txt { endcod">
+ -i 原地修改">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Sed CheatSheet">
 <meta property="og:url" content="http://www.novsec.cn/Sed CheatSheet/index.html">
@@ -26,19 +24,15 @@ sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
  单引号无法用\’转义，而双引号可以使用\”进行转义
 
 sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
- -i 原地修改
-
-{ codeblock lang:bash }sed ‘s/^/#/g’ exp.txtsed ‘s/$/–/g’ exp.txt { endcod">
-<meta property="og:updated_time" content="2016-09-19T02:53:31.000Z">
+ -i 原地修改">
+<meta property="og:updated_time" content="2016-09-19T02:56:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sed CheatSheet">
 <meta name="twitter:description" content="sed &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
  单引号无法用\’转义，而双引号可以使用\”进行转义
 
 sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
- -i 原地修改
-
-{ codeblock lang:bash }sed ‘s/^/#/g’ exp.txtsed ‘s/$/–/g’ exp.txt { endcod">
+ -i 原地修改">
     
     
         
@@ -193,19 +187,22 @@ sed -i &amp;quot;s/my/lion&amp;#39;s/g&amp;quot; exp.txt
 <li><p><code>sed -i &quot;s/my/lion&#39;s/g&quot; exp.txt</code></p>
 <p> -i 原地修改</p>
 </li>
-<li><p>{ codeblock lang:bash }<br>sed ‘s/^/#/g’ exp.txt<br>sed ‘s/$/–/g’ exp.txt<br> { endcodeblock }</p>
+</ol>
+<a id="more"></a>
+<ol>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  sed <span class="string">'s/^/#/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/$/--/g'</span> exp.txt</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 <p>^, $均为正则语法，\&lt; 表示词首， >表示词尾。如\&lt;abc表示以abc为首的词</p>
 <p>正则举例：</p>
-<p>{ codeblock lang:bash }<br>sed ‘s/&lt;.<em>&gt;//g’ html.txt (x)<br>sed ‘s/&lt;[^&gt;]\</em>&gt;//g html.txt (v)<br>{ endcodeblock }</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/&lt;.*&gt;//g'</span> html.txt (x)</span><br><span class="line">sed <span class="string">'s/&lt;[^&gt;]\*&gt;//g html.txt (v)</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>{ codeblock lang:bash }<br>sed ‘3s/my/your/g’ exp.txt<br>sed ‘3,6s/my/your/g’ exp.txt<br>{ endcodeblock }<br>指定行替换</p>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'3s/my/your/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'3,6s/my/your/g'</span> exp.txt</span><br></pre></td></tr></table></figure>
+<p>指定行替换</p>
 </li>
-<li><p>{ codeblock lang:bash }<br> sed ‘s/my/your/1’ exp.txt<br> sed ‘s/my/your/2’ exp.txt<br> sed ‘s/my/your/3g’ exp.txt<br>{ endcodeblock }</p>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/my/your/1'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/2'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/3g'</span> exp.txt</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 <p>指定行内位置替换</p>
 </li>
 </ol>
-<pre><code><span class="comment">&lt;!-- more --&gt;</span>
-</code></pre>
+
             
         </div>
     </div>
