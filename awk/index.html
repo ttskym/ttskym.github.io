@@ -6,24 +6,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Lion Blog">
-    <title>Sed CheatSheet - Lion Blog</title>
+    <title> - Lion Blog</title>
     <meta name="author" content="Lion">
     
     
     
-    <meta name="description" content="1、 单引号无法用\’转义，而双引号可以使用\”进行转义1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
-2、 -i 原地修改1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt">
+    <meta name="description" content="AWK 有三个版本：
+awk 原始的老版本
+nawk AT&amp;amp;T后来更新的版本
+gawk 自由基金组织版本
+
+基本结构pattern {action}
+pattern指定什么时候执行action。awk是面向行的。只有pattern为true的时候，action才会被执行，默认的pattern是匹配每一行。有两个特殊的pattern可由两个关键字指定BEGIN 和 END（大写），BEGIN">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Sed CheatSheet">
-<meta property="og:url" content="http://www.novsec.cn/Sed CheatSheet/index.html">
+<meta property="og:title" content="Lion Blog">
+<meta property="og:url" content="http://www.novsec.cn/awk/index.html">
 <meta property="og:site_name" content="Lion Blog">
-<meta property="og:description" content="1、 单引号无法用\’转义，而双引号可以使用\”进行转义1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
-2、 -i 原地修改1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt">
-<meta property="og:updated_time" content="2016-09-19T03:26:53.000Z">
+<meta property="og:description" content="AWK 有三个版本：
+awk 原始的老版本
+nawk AT&amp;amp;T后来更新的版本
+gawk 自由基金组织版本
+
+基本结构pattern {action}
+pattern指定什么时候执行action。awk是面向行的。只有pattern为true的时候，action才会被执行，默认的pattern是匹配每一行。有两个特殊的pattern可由两个关键字指定BEGIN 和 END（大写），BEGIN">
+<meta property="og:updated_time" content="2016-11-16T11:47:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sed CheatSheet">
-<meta name="twitter:description" content="1、 单引号无法用\’转义，而双引号可以使用\”进行转义1sed &quot;s/my/lion&apos;s/g&quot; exp.txt
-2、 -i 原地修改1sed -i &quot;s/my/lion&apos;s/g&quot; exp.txt">
+<meta name="twitter:title" content="Lion Blog">
+<meta name="twitter:description" content="AWK 有三个版本：
+awk 原始的老版本
+nawk AT&amp;amp;T后来更新的版本
+gawk 自由基金组织版本
+
+基本结构pattern {action}
+pattern指定什么时候执行action。awk是面向行的。只有pattern为true的时候，action才会被执行，默认的pattern是匹配每一行。有两个特殊的pattern可由两个关键字指定BEGIN 和 END（大写），BEGIN">
     
     
         
@@ -155,13 +170,13 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Sed CheatSheet
+            (无标题)
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-09-18T11:21:38+08:00">
+    <time itemprop="datePublished" datetime="2016-11-16T19:47:49+08:00">
 	
-		    9月 18, 2016
+		    11月 16, 2016
     	
     </time>
     
@@ -171,42 +186,45 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>1、 单引号无法用\’转义，而双引号可以使用\”进行转义<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">"s/my/lion's/g"</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>2、 -i 原地修改<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">"s/my/lion's/g"</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>3、 ^, $均为正则语法，\&lt; 表示词首， >表示词尾。如<code>\&lt;abc</code>表示以abc为首的词<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/^/#/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/$/--/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>正则举例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/&lt;.*&gt;//g'</span> html.txt (x)</span><br><span class="line">sed <span class="string">'s/&lt;[^&gt;]*&gt;//g html.txt (v)</span></span><br></pre></td></tr></table></figure>
-<p>4、 指定行替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'3s/my/your/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'3,6s/my/your/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>5、 指定行内位置替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/my/your/1'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/2'</span> exp.txt</span><br><span class="line">sed <span class="string">'s/my/your/3g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>6、 多个匹配模式，下述两个命令执行效果相同<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'1,3s/my/your/g; 3,$s/this/that/g'</span> exp.txt</span><br><span class="line">sed <span class="string">'1,3s/my/your/g'</span> <span class="_">-e</span> <span class="string">'3,$s/this/that/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>7、 &amp;可以作为被匹配的指代变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/my/[&amp;]/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>8、 圆括号匹配，\1,\2分别指代第一个圆括号匹配的内容和第二个圆括号匹配的内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/This is my \([^,]*\), .* is \(.*\)/\1:\2/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>9、 N命令式将下一行纳入缓冲区当做一行进行匹配<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'N;s/\n/,/g'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>10、 前查i， 后插a<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'1 i Insert in front of the line'</span> exp.txt</span><br><span class="line">sed <span class="string">'$ a Insert behind the line'</span> exp.txt</span><br><span class="line">sed <span class="string">'/fish/a Insert behind the pattern'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>11、 c命令替换命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'2 c example line'</span> exp.txt</span><br><span class="line">sed <span class="string">'/fish/ c pattern line'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>12、 删除命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'/fish/d'</span> exp.txt</span><br><span class="line">sed <span class="string">'2 d'</span> exp.txt</span><br><span class="line">sed <span class="string">'2,$'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>13、 grep效果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'/fish/p'</span> exp.txt</span><br></pre></td></tr></table></figure></p>
-<p>[Ref]<br><a href="http://coolshell.cn/articles/9104.html" target="_blank" rel="external">sed 简明教程</a><br><a href="http://yikun.github.io/2015/05/24/%E5%AD%A6%E4%B9%A0awk%E5%92%8Csed/" target="_blank" rel="external">学习awk和sed</a></p>
+            <h2 id="AWK_有三个版本：">AWK 有三个版本：</h2><ul>
+<li>awk 原始的老版本</li>
+<li>nawk AT&amp;T后来更新的版本</li>
+<li>gawk 自由基金组织版本</li>
+</ul>
+<h2 id="基本结构">基本结构</h2><p>pattern {action}</p>
+<p>pattern指定什么时候执行action。awk是面向行的。只有pattern为true的时候，action才会被执行，默认的pattern是匹配每一行。有两个特殊的pattern可由两个关键字指定BEGIN 和 END（大写），BEGIN匹配的action在任何行读入之前执行，END则在最后一行读入后执行。示例如下：</p>
+<p>BEGIN{print “START”} {print} END{print “STOP”}</p>
+<p>$符号指定一行中的第几个域(列)，双引号间的$符号无效。转义字符在双引号间可以执行，如“\t”，和shell不同，在shell中$x指x这个变量，而在awk中，$x指x变量所指的域。如下示例会输出两个域，一个是数字5，另一个是输入行的第五列。</p>
+<p>BEGIN{x=5} {print $x}</p>
+<p>##变量</p>
+<p>示例1：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment">#NOTE - this script does not work!</span></span><br><span class="line">column=<span class="variable">$1</span></span><br><span class="line">awk <span class="string">'&#123;print $column&#125;'</span></span><br></pre></td></tr></table></figure>
+<p>示例2：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">column=<span class="variable">$1</span></span><br><span class="line">awk <span class="string">'&#123;print $'</span><span class="variable">$column</span><span class="string">'&#125;'</span></span><br></pre></td></tr></table></figure>
+<p>执行命令：ls -l | Column 3 | uniq -c | sort -nr</p>
+<p>示例2可以得到预期效果，而示例1则不行，主要原因是shell中对单引号的处理。单引号内的内容直接输出，而双引号内的变量等才是正常引用的。awk ‘{print $’$column’}’实际执行的语句是awk {print $3}。另外shell中可以通过下面格式设置变量默认值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$&#123;variable:-defaultvalue&#125;</span></span><br><span class="line">column=<span class="variable">$&#123;1:-1&#125;</span></span><br></pre></td></tr></table></figure>
+<p>另外，awk的脚本开始执行前，变量赋值已经完成。</p>
+<p>awk ‘{print $c}’ c=${1:-1}</p>
+<p>给变量赋空值，可以在输出时删除对应变量编号的那个与值。示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/awk -f</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="variable">$1</span>=<span class="string">""</span>;</span><br><span class="line">	<span class="variable">$3</span>=<span class="string">""</span>;</span><br><span class="line">	<span class="built_in">print</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>上述示例不同于下述示例，上述示例多两个域分隔符。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/bin/awk -f</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">print</span> <span class="variable">$2</span>, <span class="variable">$4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>##内建变量</p>
+<p>###FS(域分隔符)<br>指定域分隔符的方法有两种，一种是命令行形式，一种是使用内建变量的方法。内建变量比命令行形式更灵活，更强大。内奸变量可以指定多个一定顺序字符的分隔符，还可以在执行过程中更改域分隔符，需要注意的是，如果在读取当前行之前更改了分隔符，那么新的分隔符在当前行生效，否则下一行生效，在读取了当前行之后更改分隔符，它不会冲定义变量。最新的版本中更改了分隔符后，需要加上$0=$0。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/awk -f</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> ( <span class="variable">$0</span> ~ /:/ ) &#123;</span><br><span class="line">		FS=<span class="string">":"</span>;</span><br><span class="line">		<span class="variable">$0</span>=<span class="variable">$0</span></span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		FS=<span class="string">" "</span>;</span><br><span class="line">		<span class="variable">$0</span>=<span class="variable">$0</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">#print the third field, whatever format</span></span><br><span class="line">	<span class="built_in">print</span> <span class="variable">$3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/linux/">linux</a> <a class="tag tag--primary tag--small t-link" href="/tags/sed/">sed</a>
-
-            </div>
-        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/awk/"  data-tooltip="(无标题)">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -214,7 +232,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Git Command CheetSheet/" data-tooltip="Git Command CheetSheet">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Sed CheatSheet/" data-tooltip="Sed CheatSheet">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -229,17 +247,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.novsec.cn/awk/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.novsec.cn/awk/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.novsec.cn/awk/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -287,7 +305,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/awk/"  data-tooltip="(无标题)">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -295,7 +313,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/Git Command CheetSheet/" data-tooltip="Git Command CheetSheet">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/Sed CheatSheet/" data-tooltip="Sed CheatSheet">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -310,17 +328,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.novsec.cn/awk/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.novsec.cn/awk/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.novsec.cn/awk/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -346,17 +364,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.novsec.cn/awk/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.novsec.cn/awk/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.novsec.cn/Sed CheatSheet/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.novsec.cn/awk/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>
@@ -402,9 +420,9 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'http://www.novsec.cn/Sed CheatSheet/';
+                 this.page.url = 'http://www.novsec.cn/awk/';
                  
-                    this.page.identifier = 'Sed CheatSheet/';
+                    this.page.identifier = 'awk/';
                                   
              };
             (function() {

@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Lion Blog">
 <meta property="og:description" content="本主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚邀请链接。
 之前配置过L2TP，PPTP，shadowsocks三种通路。L2TP虽然在安全性较高，但使用体验较后两种稍差，且配置麻烦，因此本文不覆盖L2TP的配置。shadowsock">
-<meta property="og:updated_time" content="2016-11-16T11:34:48.000Z">
+<meta property="og:updated_time" content="2016-11-17T12:38:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科学上网配置">
 <meta name="twitter:description" content="本主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚邀请链接。
@@ -171,7 +171,7 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>本主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚<a href="http://www.vultr.com/?ref=6875209" target="_blank" rel="external">邀请链接</a>。</p>
+            <p>本主要介绍在国外的vps上配置科学上网通路。事因是之前在DigitalOcean上配置的通路近段时间的访问速度已经影响工作效率，只能寻找替代。恰巧看到VULTR促销 ，可以免费试用两个月，于是有了这篇手记，附贴一枚<a href="http://www.vultr.com/?ref=6944059-3B" target="_blank" rel="external">邀请链接</a>。</p>
 <p>之前配置过L2TP，PPTP，shadowsocks三种通路。L2TP虽然在安全性较高，但使用体验较后两种稍差，且配置麻烦，因此本文不覆盖L2TP的配置。shadowsocks结合官方提供的osx客户端，可以很方便的实现浏览器端的使用。而PPTP VPN则可以弥补整个系统全局的需求。<br><a id="more"></a></p>
 <h2 id="Shadowsocks_Server配置">Shadowsocks Server配置</h2><p><a href="https://github.com/shadowsocks" target="_blank" rel="external">shadowsocks github 主页</a>,包含了client和Sever众多版本，这里是我采用的已经编译好的<a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="external">python Server版本</a></p>
 <p>首先执行以下命令安装shadowsocks Server<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">git <span class="built_in">clone</span> https://github.com/shadowsocks/shadowsocks.git &amp;&amp; python setup.py install</span><br></pre></td></tr></table></figure></p>
