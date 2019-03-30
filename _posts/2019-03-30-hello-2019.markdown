@@ -1,0 +1,64 @@
+---
+layout:     post
+title:      "Hello 2019"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2019-03-30 22:40:00
+author:     "jk"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 生活
+    - Meta
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+[跳过废话，看博客 ](#build) 
+
+大学的时候，就想做个记录自己成长的博客，可是那时候太年轻太浮躁，无法静下心给自己一些沉淀。
+
+虽然题目是hello 2019，可马上4月份了，要加油了！！
+
+最后，希望这个博客能陪我一起成长，keep noting！
+
+<p id = "build"></p>
+---
+
+## 正文
+
+之前用hexo，这次换Jekyll，主要是因为被[黄玄的博客](http://huangxuan.me/)的主题吸引，考虑作者以后可能还会更新主题。
+
+
+
+我希望有一个尽可能隔离、快速部署的环境来写博客，这样工作和私人电脑都可以快速适用，以后如果有变化迁移也会很方便。[docker](https://hub.docker.com/r/jekyll/jekyll/) 帮助我实现了这个需求。
+
+```shell
+docker run --rm -it -d -p 4000:4000
+	-v $PWD/blog:/srv/jekyll \
+	-v $PWD/bundle:/usr/local/bundle \
+	jekyll/jekyll /bin/bash
+
+jekyll serve --detach // 启动监测预览，后台运行
+
+jekyll build 
+```
+
+黄玄的主题里缺少Gemfile和Gemfile.lock，需要补上，并加到.gitignore中，Gemfile中需要添加
+
+gem "jekyll-paginate"
+
+然后执行
+
+bundle install
+
+否则，jekyll会报错。
+
+然后根据自己需求，修改博客，注意修改CNAME，然后就是Git的流程了。
+
+
+
+
+
