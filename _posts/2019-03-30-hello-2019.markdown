@@ -48,11 +48,11 @@ jekyll build
 
 黄玄的主题里缺少Gemfile和Gemfile.lock，需要补上，并加到.gitignore中，Gemfile中需要添加
 
-gem "jekyll-paginate"
+**gem "jekyll-paginate"**
 
 然后执行
 
-bundle install
+**bundle install**
 
 否则，jekyll会报错。
 
