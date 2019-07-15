@@ -179,13 +179,10 @@ HashMap 多线程并发导致cup100%的原因，参考 [老生常谈，HashMap�
 
 HashMap和ConcurrentHashMap区别参考 [HashMap? ConcurrentHashMap? 相信看完这篇没人能难住你！](https://juejin.im/post/5b551e8df265da0f84562403#heading-13)
 
-![img](Java_Cocurrency/164c47f32e1066e8)
-
-![img](Java_Cocurrency/164c47f32f9650ba)
-
-![img](Java_Cocurrency/164c47f3756eb206)
-
-![img](Java_Cocurrency/164c47f35b08fddd)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/hashmap.png)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/hashmap18.png)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/cocurrenthashmap.png)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/concurrenthahmap1.png)
 
 ### Q ?
 
@@ -234,7 +231,7 @@ CopyOnWriteArrayList 主要的思想是写时复制，即COW思想。COW思想�
 
 ## BlockingQueue
 
-![BlockingQueueåºæ¬æä½.png](Java_Cocurrency/163349267ca3fc39)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/blockingqueue.png)
 
 ### ArrayBlockingQueue
 
@@ -254,12 +251,11 @@ LinkedBlockingQueue是内用采用`链表`实现的`有界阻塞`队列，Linked
 
 ## ThreadLocal
 
-![img](Java_Cocurrency/2615789-9107eeb7ad610325.webp)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/threadlocal.png)
 
 每个Thread有一个ThreadLocalMap变量，ThreadLocalMap是ThreadLocal的一个静态内部类，每个ThreadLocal通过当前Thread对象可以获取Thread对应的ThreadLocalMap，ThreadLoaclMap内的Entry以当前ThreadLocal实例为key进行存储。Entry继承了弱引用类，所以Entry中的key，即对应的ThreadLocal为弱引用，使用完当前ThreadLocal后调用remove方法进行清理。
 
 ## 线程池
 
-![_1500983010161](Java_Cocurrency/_1500983010161.png)
-
-![ScheduledThreadPoolExecutorç±»çUMLå¾.png](Java_Cocurrency/16334a21947ee154)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/threadpool.png)
+![](http://img.charflow.com/2019-06-01-Java_Cocurrency_One/executor.png)
