@@ -44,7 +44,7 @@ tags:
 
 简单的说，就是明确区分加锁阶段和解锁阶段，加锁阶段只能加锁，解锁阶段只能解锁。每个阶段锁的数量可以变化。
 
-![two_phrase_lock](http://img.charflow.com/2019-07-01-DataBase_Transactional_and_Lock/two_phrase_lock.jpeg)
+![two_phrase_lock](https://img.charflow.com/2019-07-01-DataBase_Transactional_and_Lock/two_phrase_lock.jpeg)
 
 #### when lock, when release
 
