@@ -12,7 +12,7 @@ tags:
     - Functional Programming
 ---
 
-![](http://img.charflow.com/2019-04-01-Java8_functional_programming/java8.jpeg)
+![](https://img.charflow.com/2019-04-01-Java8_functional_programming/java8.jpeg)
 
 ##  default & static methods  in interfaces
 
@@ -95,7 +95,7 @@ public String turnAlarmOff() {
 
   - 经典类 DFS
 
-    ![](http://img.charflow.com/2019-04-01-Java8_functional_programming/python-MRO.jpg)
+    ![](https://img.charflow.com/2019-04-01-Java8_functional_programming/python-MRO.jpg)
 
     问题：菱形继承总，C只能继承无法重写
 
@@ -103,7 +103,7 @@ public String turnAlarmOff() {
 
   - 新式类：C3线性算法(大杀器)，和拓扑排序相似，但有区别。手动计算C3 Linearization！
 
-    ![](http://img.charflow.com/2019-04-01-Java8_functional_programming/multiple_inheritance.png)
+    ![](https://img.charflow.com/2019-04-01-Java8_functional_programming/multiple_inheritance.png)
 
   【Ref】
 
@@ -640,7 +640,7 @@ stream.distinct()
     .forEach(str -> System.out.println(str));
 ```
 
-![](http://img.charflow.com/2019-04-01-Java8_functional_programming/stream-distinct.png)
+![](https://img.charflow.com/2019-04-01-Java8_functional_programming/stream-distinct.png)
 
 #### sorted()
 
@@ -662,7 +662,7 @@ stream.map(str -> str.toUpperCase())
     .forEach(str -> System.out.println(str));
 ```
 
-![](http://img.charflow.com/2019-04-01-Java8_functional_programming/stream-map.png)
+![](https://img.charflow.com/2019-04-01-Java8_functional_programming/stream-map.png)
 
 #### flatMap()
 
