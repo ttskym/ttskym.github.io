@@ -558,7 +558,7 @@ namesMap.forEach((key, value) -> System.out.println(key + " " + value));// Map�
 
 Java 8 中 JCF 添加了Lambda的支持，背后的原理就是接口中加入了对default和static的支持。
 
-![JCF_Collection_Interfaces](http://img.charflow.com/2019-04-01-Java8_functional_programming/JCF_Collection_Interfaces.png)
+![JCF_Collection_Interfaces](https://img.charflow.com/2019-04-01-Java8_functional_programming/JCF_Collection_Interfaces.png)
 
 | 接口名     | Java8新加入的方法                                            |
 | ---------- | ------------------------------------------------------------ |
@@ -628,7 +628,7 @@ stream.filter(str -> str.length()==3)
     .forEach(str -> System.out.println(str));
 ```
 
-![1553517036254](http://img.charflow.com/2019-04-01-Java8_functional_programming/stream-fileter.png)
+![1553517036254](https://img.charflow.com/2019-04-01-Java8_functional_programming/stream-fileter.png)
 
 #### distinct()
 
@@ -684,7 +684,7 @@ T reduce(T identity, BinaryOperator<T> accumulator)
 <U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
 ```
 
-![Stream.reduce_parameter](http://img.charflow.com/2019-04-01-Java8_functional_programming/Stream.reduce_parameter.png)
+![Stream.reduce_parameter](https://img.charflow.com/2019-04-01-Java8_functional_programming/Stream.reduce_parameter.png)
 
 ```java
 // 求单词长度之和
@@ -698,7 +698,7 @@ System.out.println(lengthSum);
 
 ### collect
 
-![Stream.collect_parameter](http://img.charflow.com/2019-04-01-Java8_functional_programming/Stream.collect_parameter.png)
+![Stream.collect_parameter](https://img.charflow.com/2019-04-01-Java8_functional_programming/Stream.collect_parameter.png)
 
 ```java
 <R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator, BiConsumer<R,R> combiner) // collect 签名
