@@ -97,7 +97,7 @@ public String turnAlarmOff() {
 
     ![](https://img.charflow.com/2019-04-01-Java8_functional_programming/python-MRO.jpg)
 
-    问题：菱形继承总，C只能继承无法重写
+    问题：菱形继承，C只能继承无法重写
 
   - BFS——存在单调性问题
 
