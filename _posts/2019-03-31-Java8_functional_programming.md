@@ -238,7 +238,7 @@ public class Hello {
   list.forEach(e -> { aList.add(e); }); // Legal, open over variables
   ```
 
-  *和函数式编程的**immutable data** 思想很像。[函数式编程*](https://coolshell.cn/articles/10822.html)
+  *和函数式编程的**immutable data** 思想很像*。[函数式编程](https://coolshell.cn/articles/10822.html)
 
 #### 瞅一眼JVM层面
 
