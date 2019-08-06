@@ -45,7 +45,7 @@ tags:
 
 ##### 多重继承问题！！
 
-- > （compile-time error）interface * inherits unrelated defaults for defaultCommon() from types  * and *
+- > （compile-time error）interface "xxx" inherits unrelated defaults for defaultCommon() from types "xxx" and "yyy"
 
 - 接口允许多重继承，如果实现或继承多个接口，重名方法需要重写提供一个实现。
 
